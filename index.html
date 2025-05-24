@@ -58,6 +58,24 @@
     .speech-task-labels {
       font-size: 1.2em;
     }
+    .vertical-header {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      text-align: center;
+      vertical-align: middle;
+      position: relative;
+      border: 1px solid #ccc !important;
+      box-sizing: border-box;
+      background-clip: padding-box;
+    }
+    .vertical-header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid #ccc;
+      pointer-events: none;
+      z-index: 1;
+    }
   </style>
 </head>
 <body>
@@ -98,7 +116,7 @@
     <tbody>
       <!-- SV group -->
       <tr data-rowname="a">
-        <th rowspan="4" class="speech-task-labels">SV</th>
+        <th rowspan="4" class="speech-task-labels vertical-header">Sustained Vowel (SV)</th>
         <th class="speech-task-labels">/a/</th>
         <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_a.mp3"></audio></td>
         <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_a.mp3"></audio></td>
@@ -132,7 +150,7 @@
       </tr>
       <!-- SF group -->
       <tr data-rowname="s">
-        <th rowspan="3" class="speech-task-labels">SF</th>
+        <th rowspan="3" class="speech-task-labels vertical-header">Sustained Fricative (SF)</th>
         <th class="speech-task-labels">/s/</th>
         <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_s.mp3"></audio></td>
         <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_s.mp3"></audio></td>
@@ -158,7 +176,7 @@
       </tr>
       <!-- DDK group -->
       <tr data-rowname="pa">
-        <th rowspan="5" class="speech-task-labels">DDK</th>
+        <th rowspan="5" class="speech-task-labels vertical-header">Diadochokinetic Task (DDK)</th>
         <th class="speech-task-labels">pa</th>
         <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_pa.mp3"></audio></td>
         <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_pa.mp3"></audio></td>
@@ -200,7 +218,7 @@
       </tr>
       <!-- IMAG and SPON merged horizontally for two columns -->
       <tr data-rowname="IMAG">
-        <th colspan="2" class="speech-task-labels">IMAG</th>
+        <th colspan="2" class="speech-task-labels">Image Description (IMAG)</th>
         <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_IMAG.mp3"></audio></td>
         <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_IMAG.mp3"></audio></td>
         <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_IMAG.mp3"></audio></td>
@@ -208,7 +226,7 @@
         <td data-colname="telegu"><audio controls src="audio/cot_audio_telegu_IMAG.mp3"></audio></td>
       </tr>
       <tr data-rowname="SPON">
-        <th colspan="2" class="speech-task-labels">SPON</th>
+        <th colspan="2" class="speech-task-labels">Spontaneous Speech (SPON)</th>
         <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_SPON.mp3"></audio></td>
         <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_SPON.mp3"></audio></td>
         <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_SPON.mp3"></audio></td>
