@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AudioSamples</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      table-layout: auto;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      white-space: nowrap;
+    }
+    audio {
+      width: 100%;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    /* Make first two columns fit content */
+    th:first-child,
+    th:nth-child(2),
+    td:first-child,
+    td:nth-child(2) {
+      width: 1%;
+      white-space: nowrap;
+      text-align: center;
+    }
+    /* Make all language columns equal width */
+    .lang-col {
+      width: 19%;
+      min-width: 100px;
+    }
+    /* Style for the merged "Language" row */
+    .language-header {
+      background-color: #e0e0e0;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="margin: 0; text-align: center;">Audio Samples From Collected Dataset</h1>
+  <div style="margin: 1em 0; font-size: 1.3em; text-align: center;">
+    <label for="conditionSelect" style="font-size: 1em;">Condition:</label>
+    <select id="conditionSelect" style="font-size: 1em;">
+      <option value="Healthy">Healthy</option>
+      <option value="ALS">ALS</option>
+    </select>
+  </div>
+  <table>
+    <colgroup>
+      <col style="width:1%">
+      <col style="width:1%">
+      <col class="lang-col">
+      <col class="lang-col">
+      <col class="lang-col">
+      <col class="lang-col">
+      <col class="lang-col">
+    </colgroup>
+    <thead>
+      <tr>
+        <th rowspan="2" class="speech-task-main" colspan="2">
+          Speech Task<br>
+          <span id="conditionLabel" style="display:block; font-size:0.9em; font-weight:normal;">(Healthy)</span>
+        </th>
+        <th class="language-header" colspan="5">Language</th>
+      </tr>
+      <tr>
+        <th class="lang-col">Hindi</th>
+        <th class="lang-col">Bengali</th>
+        <th class="lang-col">Kannada</th>
+        <th class="lang-col">Tamil</th>
+        <th class="lang-col">Telegu</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- SV group -->
+      <tr data-rowname="a">
+        <th rowspan="4">SV</th>
+        <th>/a/</th>
+        <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_a.mp3"></audio></td>
+        <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_a.mp3"></audio></td>
+        <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_a.mp3"></audio></td>
+        <td data-colname="tamil"><audio controls src="audio/cot_audio_tamil_a.mp3"></audio></td>
+        <td data-colname="telegu"><audio controls src="audio/cot_audio_telegu_a.mp3"></audio></td>
+      </tr>
+      <tr data-rowname="i">
+        <th>/i/</th>
+        <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_i.mp3"></audio></td>
+        <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_i.mp3"></audio></td>
+        <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_i.mp3"></audio></td>
+        <td data-colname="tamil"><audio controls src="audio/cot_audio_tamil_i.mp3"></audio></td>
+        <td data-colname="telegu"><audio controls src="audio/cot_audio_telegu_i.mp3"></audio></td>
+      </tr>
+      <tr data-rowname="o">
+        <th>/o/</th>
+        <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_o.mp3"></audio></td>
+        <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_o.mp3"></audio></td>
+        <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_o.mp3"></audio></td>
+        <td data-colname="tamil"><audio controls src="audio/cot_audio_tamil_o.mp3"></audio></td>
+        <td data-colname="telegu"><audio controls src="audio/cot_audio_telegu_o.mp3"></audio></td>
+      </tr>
+      <tr data-rowname="u">
+        <th>/u/</th>
+        <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_u.mp3"></audio></td>
+        <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_u.mp3"></audio></td>
+        <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_u.mp3"></audio></td>
+        <td data-colname="tamil"><audio controls src="audio/cot_audio_tamil_u.mp3"></audio></td>
+        <td data-colname="telegu"><audio controls src="audio/cot_audio_telegu_u.mp3"></audio></td>
+      </tr>
+      <!-- SF group -->
+      <tr data-rowname="s">
+        <th rowspan="3">SF</th>
+        <th>/s/</th>
+        <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_s.mp3"></audio></td>
+        <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_s.mp3"></audio></td>
+        <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_s.mp3"></audio></td>
+        <td data-colname="tamil"><audio controls src="audio/cot_audio_tamil_s.mp3"></audio></td>
+        <td data-colname="telegu"><audio controls src="audio/cot_audio_telegu_s.mp3"></audio></td>
+      </tr>
+      <tr data-rowname="sh">
+        <th>/sh/</th>
+        <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_sh.mp3"></audio></td>
+        <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_sh.mp3"></audio></td>
+        <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_sh.mp3"></audio></td>
+        <td data-colname="tamil"><audio controls src="audio/cot_audio_tamil_sh.mp3"></audio></td>
+        <td data-colname="telegu"><audio controls src="audio/cot_audio_telegu_sh.mp3"></audio></td>
+      </tr>
+      <tr data-rowname="f">
+        <th>/f/</th>
+        <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_f.mp3"></audio></td>
+        <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_f.mp3"></audio></td>
+        <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_f.mp3"></audio></td>
+        <td data-colname="tamil"><audio controls src="audio/cot_audio_tamil_f.mp3"></audio></td>
+        <td data-colname="telegu"><audio controls src="audio/cot_audio_telegu_f.mp3"></audio></td>
+      </tr>
+      <!-- DDK group -->
+      <tr data-rowname="pa">
+        <th rowspan="5">DDK</th>
+        <th>pa</th>
+        <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_pa.mp3"></audio></td>
+        <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_pa.mp3"></audio></td>
+        <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_pa.mp3"></audio></td>
+        <td data-colname="tamil"><audio controls src="audio/cot_audio_tamil_pa.mp3"></audio></td>
+        <td data-colname="telegu"><audio controls src="audio/cot_audio_telegu_pa.mp3"></audio></td>
+      </tr>
+      <tr data-rowname="ta">
+        <th>ta</th>
+        <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_ta.mp3"></audio></td>
+        <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_ta.mp3"></audio></td>
+        <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_ta.mp3"></audio></td>
+        <td data-colname="tamil"><audio controls src="audio/cot_audio_tamil_ta.mp3"></audio></td>
+        <td data-colname="telegu"><audio controls src="audio/cot_audio_telegu_ta.mp3"></audio></td>
+      </tr>
+      <tr data-rowname="ka">
+        <th>ka</th>
+        <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_ka.mp3"></audio></td>
+        <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_ka.mp3"></audio></td>
+        <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_ka.mp3"></audio></td>
+        <td data-colname="tamil"><audio controls src="audio/cot_audio_tamil_ka.mp3"></audio></td>
+        <td data-colname="telegu"><audio controls src="audio/cot_audio_telegu_ka.mp3"></audio></td>
+      </tr>
+      <tr data-rowname="pataka">
+        <th>pataka</th>
+        <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_pataka.mp3"></audio></td>
+        <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_pataka.mp3"></audio></td>
+        <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_pataka.mp3"></audio></td>
+        <td data-colname="tamil"><audio controls src="audio/cot_audio_tamil_pataka.mp3"></audio></td>
+        <td data-colname="telegu"><audio controls src="audio/cot_audio_telegu_pataka.mp3"></audio></td>
+      </tr>
+      <tr data-rowname="badaga">
+        <th>badaga</th>
+        <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_badaga.mp3"></audio></td>
+        <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_badaga.mp3"></audio></td>
+        <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_badaga.mp3"></audio></td>
+        <td data-colname="tamil"><audio controls src="audio/cot_audio_tamil_badaga.mp3"></audio></td>
+        <td data-colname="telegu"><audio controls src="audio/cot_audio_telegu_badaga.mp3"></audio></td>
+      </tr>
+      <!-- IMAG and SPON merged horizontally for two columns -->
+      <tr data-rowname="IMAG">
+        <th colspan="2">IMAG</th>
+        <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_IMAG.mp3"></audio></td>
+        <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_IMAG.mp3"></audio></td>
+        <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_IMAG.mp3"></audio></td>
+        <td data-colname="tamil"><audio controls src="audio/cot_audio_tamil_IMAG.mp3"></audio></td>
+        <td data-colname="telegu"><audio controls src="audio/cot_audio_telegu_IMAG.mp3"></audio></td>
+      </tr>
+      <tr data-rowname="SPON">
+        <th colspan="2">SPON</th>
+        <td data-colname="hindi"><audio controls src="audio/cot_audio_hindi_SPON.mp3"></audio></td>
+        <td data-colname="bengali"><audio controls src="audio/cot_audio_bengali_SPON.mp3"></audio></td>
+        <td data-colname="kannada"><audio controls src="audio/cot_audio_kannada_SPON.mp3"></audio></td>
+        <td data-colname="tamil"><audio controls src="audio/cot_audio_tamil_SPON.mp3"></audio></td>
+        <td data-colname="telegu"><audio controls src="audio/cot_audio_telegu_SPON.mp3"></audio></td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    document.getElementById('conditionSelect').addEventListener('change', function() {
+      const condition = this.value;
+      document.querySelectorAll('tr[data-rowname]').forEach(row => {
+        const rowName = row.getAttribute('data-rowname');
+        row.querySelectorAll('td[data-colname] audio').forEach(audio => {
+          const colName = audio.closest('td').getAttribute('data-colname');
+          const prefix = condition === 'ALS' ? 'audio/als_audio_' : 'audio/cot_audio_';
+          audio.src = `${prefix}${colName}_${rowName}.mp3`;
+        });
+      });
+      document.getElementById('conditionLabel').textContent = `(${condition})`;
+    });
+  </script>
+</body>
+</html>
