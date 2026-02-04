@@ -1,256 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AudioSamples</title>
-  <style>
-    table {
-      width: 90%;
-      margin: 1em auto;
-      border-collapse: collapse;
-      text-align: center;
-      table-layout: auto;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      white-space: nowrap;
-    }
-    audio {
-      width: 90%;
-      display: block;
-      margin: 0 auto;
-    }
-    th {
-      background-color: #f0f0f0;
-    }
-    /* Make first two columns fit content */
-    th:first-child,
-    th:nth-child(2),
-    td:first-child,
-    td:nth-child(2) {
-      width: 1%;
-      white-space: nowrap;
-      text-align: center;
-    }
-    /* Make all language columns equal width */
-    .lang-col {
-      width: 19%;
-      min-width: 100px;
-      font-size: 1.2em;
-    }
-    /* Style for the merged "Language" row */
-    .language-header {
-      background-color: #e0e0e0;
-      font-weight: bold;
-      font-size: 1.3em;
-      text-align: center;
-    }
-    .dropdown-container {
-      font-size: 1.4em;
-    }
-    .dropdown-container select {
-      font-size: 1.1em;
-    }
-    .speech-task-main {
-      font-size: 1.3em;
-    }
-    .speech-task-labels {
-      font-size: 1.2em;
-    }
-    .vertical-header {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      text-align: center;
-      vertical-align: middle;
-      position: relative;
-      border: 1px solid #ccc !important;
-      box-sizing: border-box;
-      background-clip: padding-box;
-    }
-    .vertical-header::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border: 1px solid #ccc;
-      pointer-events: none;
-      z-index: 1;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumya Chatterjee | Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <h1 style="margin: 0; text-align: center;">Audio Samples From Collected Dataset</h1>
-  <div class="dropdown-container" style="margin: 1em 0; text-align: center;">
-    <label for="conditionSelect">Condition:</label>
-    <select id="conditionSelect">
-      <option value="Healthy">Healthy</option>
-      <option value="ALS">ALS</option>
-    </select>
-  </div>
-  <div style="margin: 0; text-align: center; color: blue;">*Please <span style="font-weight: bold;">disable Noise Filter of the system</span> to listen to the sustained vowels and fricatives.</div>
-  <table>
-    <colgroup>
-      <col style="width:1%">
-      <col style="width:1%">
-      <col class="lang-col">
-      <col class="lang-col">
-      <col class="lang-col">
-      <col class="lang-col">
-      <col class="lang-col">
-    </colgroup>
-    <thead>
-      <tr>
-        <th rowspan="2" class="speech-task-main" colspan="2">
-          Speech Task<br>
-          <span id="conditionLabel" style="display:block; font-size:0.9em; font-weight:normal;">(Healthy)</span>
-        </th>
-        <th class="language-header" colspan="5">Native Language / Recording Language</th>
-      </tr>
-      <tr>
-        <th class="lang-col">Bengali</th>
-        <th class="lang-col">Hindi</th>
-        <th class="lang-col">Kannada</th>
-        <th class="lang-col">Tamil</th>
-        <th class="lang-col">Telugu</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- SV group -->
-      <tr data-rowname="a">
-        <th rowspan="4" class="speech-task-labels vertical-header">Sustained Vowel (SV)</th>
-        <th class="speech-task-labels">/a/</th>
-        <td data-colname="bengali"><audio controls src="audio/cot_bengali_a.mp3"></audio></td>
-        <td data-colname="hindi"><audio controls src="audio/cot_hindi_a.mp3"></audio></td>
-        <td data-colname="kannada"><audio controls src="audio/cot_kannada_a.mp3"></audio></td>
-        <td data-colname="tamil"><audio controls src="audio/cot_tamil_a.mp3"></audio></td>
-        <td data-colname="telugu"><audio controls src="audio/cot_telugu_a.mp3"></audio></td>
-      </tr>
-      <tr data-rowname="i">
-        <th class="speech-task-labels">/i/</th>
-        <td data-colname="bengali"><audio controls src="audio/cot_bengali_i.mp3"></audio></td>
-        <td data-colname="hindi"><audio controls src="audio/cot_hindi_i.mp3"></audio></td>
-        <td data-colname="kannada"><audio controls src="audio/cot_kannada_i.mp3"></audio></td>
-        <td data-colname="tamil"><audio controls src="audio/cot_tamil_i.mp3"></audio></td>
-        <td data-colname="telugu"><audio controls src="audio/cot_telugu_i.mp3"></audio></td>
-      </tr>
-      <tr data-rowname="o">
-        <th class="speech-task-labels">/o/</th>
-        <td data-colname="bengali"><audio controls src="audio/cot_bengali_o.mp3"></audio></td>
-        <td data-colname="hindi"><audio controls src="audio/cot_hindi_o.mp3"></audio></td>
-        <td data-colname="kannada"><audio controls src="audio/cot_kannada_o.mp3"></audio></td>
-        <td data-colname="tamil"><audio controls src="audio/cot_tamil_o.mp3"></audio></td>
-        <td data-colname="telugu"><audio controls src="audio/cot_telugu_o.mp3"></audio></td>
-      </tr>
-      <tr data-rowname="u">
-        <th class="speech-task-labels">/u/</th>
-        <td data-colname="bengali"><audio controls src="audio/cot_bengali_u.mp3"></audio></td>
-        <td data-colname="hindi"><audio controls src="audio/cot_hindi_u.mp3"></audio></td>
-        <td data-colname="kannada"><audio controls src="audio/cot_kannada_u.mp3"></audio></td>
-        <td data-colname="tamil"><audio controls src="audio/cot_tamil_u.mp3"></audio></td>
-        <td data-colname="telugu"><audio controls src="audio/cot_telugu_u.mp3"></audio></td>
-      </tr>
-      <!-- SF group -->
-      <tr data-rowname="s">
-        <th rowspan="3" class="speech-task-labels vertical-header">Sustained Fricative (SF)</th>
-        <th class="speech-task-labels">/s/</th>
-        <td data-colname="bengali"><audio controls src="audio/cot_bengali_s.mp3"></audio></td>
-        <td data-colname="hindi"><audio controls src="audio/cot_hindi_s.mp3"></audio></td>
-        <td data-colname="kannada"><audio controls src="audio/cot_kannada_s.mp3"></audio></td>
-        <td data-colname="tamil"><audio controls src="audio/cot_tamil_s.mp3"></audio></td>
-        <td data-colname="telugu"><audio controls src="audio/cot_telugu_s.mp3"></audio></td>
-      </tr>
-      <tr data-rowname="sh">
-        <th class="speech-task-labels">/sh/</th>
-        <td data-colname="bengali"><audio controls src="audio/cot_bengali_sh.mp3"></audio></td>
-        <td data-colname="hindi"><audio controls src="audio/cot_hindi_sh.mp3"></audio></td>
-        <td data-colname="kannada"><audio controls src="audio/cot_kannada_sh.mp3"></audio></td>
-        <td data-colname="tamil"><audio controls src="audio/cot_tamil_sh.mp3"></audio></td>
-        <td data-colname="telugu"><audio controls src="audio/cot_telugu_sh.mp3"></audio></td>
-      </tr>
-      <tr data-rowname="f">
-        <th class="speech-task-labels">/f/</th>
-        <td data-colname="bengali"><audio controls src="audio/cot_bengali_f.mp3"></audio></td>
-        <td data-colname="hindi"><audio controls src="audio/cot_hindi_f.mp3"></audio></td>
-        <td data-colname="kannada"><audio controls src="audio/cot_kannada_f.mp3"></audio></td>
-        <td data-colname="tamil"><audio controls src="audio/cot_tamil_f.mp3"></audio></td>
-        <td data-colname="telugu"><audio controls src="audio/cot_telugu_f.mp3"></audio></td>
-      </tr>
-      <!-- DDK group -->
-      <tr data-rowname="pa">
-        <th rowspan="5" class="speech-task-labels vertical-header">Diadochokinetic Task (DDK)</th>
-        <th class="speech-task-labels">pa</th>
-        <td data-colname="bengali"><audio controls src="audio/cot_bengali_pa.mp3"></audio></td>
-        <td data-colname="hindi"><audio controls src="audio/cot_hindi_pa.mp3"></audio></td>
-        <td data-colname="kannada"><audio controls src="audio/cot_kannada_pa.mp3"></audio></td>
-        <td data-colname="tamil"><audio controls src="audio/cot_tamil_pa.mp3"></audio></td>
-        <td data-colname="telugu"><audio controls src="audio/cot_telugu_pa.mp3"></audio></td>
-      </tr>
-      <tr data-rowname="ta">
-        <th class="speech-task-labels">ta</th>
-        <td data-colname="bengali"><audio controls src="audio/cot_bengali_ta.mp3"></audio></td>
-        <td data-colname="hindi"><audio controls src="audio/cot_hindi_ta.mp3"></audio></td>
-        <td data-colname="kannada"><audio controls src="audio/cot_kannada_ta.mp3"></audio></td>
-        <td data-colname="tamil"><audio controls src="audio/cot_tamil_ta.mp3"></audio></td>
-        <td data-colname="telugu"><audio controls src="audio/cot_telugu_ta.mp3"></audio></td>
-      </tr>
-      <tr data-rowname="ka">
-        <th class="speech-task-labels">ka</th>
-        <td data-colname="bengali"><audio controls src="audio/cot_bengali_ka.mp3"></audio></td>
-        <td data-colname="hindi"><audio controls src="audio/cot_hindi_ka.mp3"></audio></td>
-        <td data-colname="kannada"><audio controls src="audio/cot_kannada_ka.mp3"></audio></td>
-        <td data-colname="tamil"><audio controls src="audio/cot_tamil_ka.mp3"></audio></td>
-        <td data-colname="telugu"><audio controls src="audio/cot_telugu_ka.mp3"></audio></td>
-      </tr>
-      <tr data-rowname="pataka">
-        <th class="speech-task-labels">pataka</th>
-        <td data-colname="bengali"><audio controls src="audio/cot_bengali_pataka.mp3"></audio></td>
-        <td data-colname="hindi"><audio controls src="audio/cot_hindi_pataka.mp3"></audio></td>
-        <td data-colname="kannada"><audio controls src="audio/cot_kannada_pataka.mp3"></audio></td>
-        <td data-colname="tamil"><audio controls src="audio/cot_tamil_pataka.mp3"></audio></td>
-        <td data-colname="telugu"><audio controls src="audio/cot_telugu_pataka.mp3"></audio></td>
-      </tr>
-      <tr data-rowname="badaga">
-        <th class="speech-task-labels">badaga</th>
-        <td data-colname="bengali"><audio controls src="audio/cot_bengali_badaga.mp3"></audio></td>
-        <td data-colname="hindi"><audio controls src="audio/cot_hindi_badaga.mp3"></audio></td>
-        <td data-colname="kannada"><audio controls src="audio/cot_kannada_badaga.mp3"></audio></td>
-        <td data-colname="tamil"><audio controls src="audio/cot_tamil_badaga.mp3"></audio></td>
-        <td data-colname="telugu"><audio controls src="audio/cot_telugu_badaga.mp3"></audio></td>
-      </tr>
-      <!-- IMAG and SPON merged horizontally for two columns -->
-      <tr data-rowname="imag">
-        <th colspan="2" class="speech-task-labels">Image<br>Description<br>
-          <span id="conditionLabel" style="display:block; font-size:0.9em; font-weight:bold;">(IMAG)</span></th>
-        <td data-colname="bengali"><audio controls src="audio/cot_bengali_imag.mp3"></audio></td>
-        <td data-colname="hindi"><audio controls src="audio/cot_hindi_imag.mp3"></audio></td>
-        <td data-colname="kannada"><audio controls src="audio/cot_kannada_imag.mp3"></audio></td>
-        <td data-colname="tamil"><audio controls src="audio/cot_tamil_imag.mp3"></audio></td>
-        <td data-colname="telugu"><audio controls src="audio/cot_telugu_imag.mp3"></audio></td>
-      </tr>
-      <tr data-rowname="spon">
-        <th colspan="2" class="speech-task-labels">Spontaneous<br>Speech
-          <span id="conditionLabel" style="display:block; font-size:0.9em; font-weight:bold;">(SPON)</span></th>
-        <td data-colname="bengali"><audio controls src="audio/cot_bengali_spon.mp3"></audio></td>
-        <td data-colname="hindi"><audio controls src="audio/cot_hindi_spon.mp3"></audio></td>
-        <td data-colname="kannada"><audio controls src="audio/cot_kannada_spon.mp3"></audio></td>
-        <td data-colname="tamil"><audio controls src="audio/cot_tamil_spon.mp3"></audio></td>
-        <td data-colname="telugu"><audio controls src="audio/cot_telugu_spon.mp3"></audio></td>
-      </tr>
-    </tbody>
-  </table>
-  <script>
-    document.getElementById('conditionSelect').addEventListener('change', function() {
-      const condition = this.value;
-      document.querySelectorAll('tr[data-rowname]').forEach(row => {
-        const rowName = row.getAttribute('data-rowname');
-        row.querySelectorAll('td[data-colname] audio').forEach(audio => {
-          const colName = audio.closest('td').getAttribute('data-colname');
-          const prefix = condition === 'ALS' ? 'audio/als_' : 'audio/cot_';
-          audio.src = `${prefix}${colName}_${rowName}.mp3`;
-        });
-      });
-      document.getElementById('conditionLabel').textContent = `(${condition})`;
-    });
-  </script>
+<body class="mode-web">
+    <header class="site-header">
+        <div class="header-left">
+            <div class="brand">
+                <span class="logo">SC</span>
+                <div>
+                    <p class="name">Soumya Chatterjee</p>
+                    <p class="title">Software Developer</p>
+                </div>
+            </div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"></button>
+        </div>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="mode-toggle" id="mode-toggle" type="button">CLI</button>
+    </header>
+
+    <main>
+        <section id="home" class="hero web-view">
+            <div class="hero-content">
+                <p class="eyebrow">Bangalore, India</p>
+                <h1>Building resilient data-driven platforms for finance, telecom, and retail.</h1>
+                <p class="lead">
+                    Associate Vice President at JP Morgan Chase with end-to-end experience across distributed data systems,
+                    microservices, and real-time monitoring. Passionate about combining software engineering and data science
+                    to unlock measurable business value.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="#contact">Let's Connect</a>
+                    <a class="btn ghost" href="https://linkedin.com/in/soumyachatterjee-088" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+            </div>
+            <div class="hero-card">
+                <p class="stat-label">Experience</p>
+                <p class="stat-value">10+ years</p>
+                <p class="stat-sub">Product delivery in banking, telecom & retail</p>
+                <hr>
+                <p class="stat-label">Current Role</p>
+                <p class="stat-value">AVP &middot; JPMorgan Chase</p>
+                <p class="stat-sub">Asset & Wealth Management Data Platforms</p>
+            </div>
+        </section>
+
+        <section id="about" class="card web-view">
+            <div class="section-heading">
+                <p class="eyebrow">About</p>
+                <h2>Driving reliable applications from ingestion to insight.</h2>
+            </div>
+            <p>
+                Software Developer with over a decade of success delivering enterprise systems for finance, telecom, and retail.
+                Adept in Java, Spring, Angular, Spark, and Kubernetes with practical cloud experience across AWS and Azure.
+                Recently expanded into Data Science to pair machine learning with engineering rigor and keep solutions observability-first.
+            </p>
+            <p>
+                I love building services that run themselves&mdash;self-healing data loads, actionable monitoring, and concise APIs that scale with demand.
+            </p>
+        </section>
+
+        <section id="skills" class="card web-view">
+            <div class="section-heading">
+                <p class="eyebrow">Skills</p>
+                <h2>Tools I reach for every day.</h2>
+            </div>
+            <ul class="pill-list">
+                <li>Java</li>
+                <li>Spring Framework</li>
+                <li>Angular</li>
+                <li>SQL & PostgreSQL</li>
+                <li>MongoDB</li>
+                <li>Spark</li>
+                <li>Kubernetes</li>
+                <li>AWS</li>
+                <li>Azure</li>
+                <li>Machine Learning</li>
+                <li>Git</li>
+                <li>Splunk</li>
+            </ul>
+        </section>
+
+        <section id="experience" class="card web-view">
+            <div class="section-heading">
+                <p class="eyebrow">Experience</p>
+                <h2>Career timeline</h2>
+            </div>
+            <div class="timeline">
+                <article>
+                    <header>
+                        <p class="role">Associate Vice President</p>
+                        <p class="company">JP Morgan Chase &amp; Co. &middot; Oct 2022 - Present</p>
+                    </header>
+                    <ul>
+                        <li>Lead data applications within Asset & Wealth Management to process millions of records daily.</li>
+                        <li>Optimized batch pipelines with self-healing logic to prevent blockers from erroneous data.</li>
+                        <li>Aggregated multi-source datasets through Spark and exposed actionable results to business stakeholders.</li>
+                        <li>Built real-time monitoring that surfaces live data quality signals for decision makers.</li>
+                        <li>Implemented Unified Managed Accounts and UMA Rebalancing from scratch.</li>
+                    </ul>
+                </article>
+                <article>
+                    <header>
+                        <p class="role">Application Development Assistant Manager</p>
+                        <p class="company">Accenture &middot; Apr 2019 - Oct 2022</p>
+                    </header>
+                    <ul>
+                        <li>Guided feature teams for a Dutch bank, aligning delivery with business outcomes.</li>
+                        <li>Collaborated across client and offshore groups to ship full-stack solutions.</li>
+                        <li>Mentored new joiners and screened talent to accelerate onboarding.</li>
+                        <li>Shipped, tested, and deployed features across four applications concurrently.</li>
+                        <li>Built dashboards to monitor microservice performance.</li>
+                    </ul>
+                </article>
+                <article>
+                    <header>
+                        <p class="role">Software Engineer &middot; Full-Stack Developer</p>
+                        <p class="company">L&amp;T Technology Services &middot; Feb 2018 - Apr 2019</p>
+                    </header>
+                    <ul>
+                        <li>Delivered 20+ REST APIs in Java/Spring for a global telecom leader.</li>
+                        <li>Paired Angular UI updates with backend integrations across multiple systems.</li>
+                        <li>Resolved 250+ issues alongside distributed teams to maintain quality releases.</li>
+                    </ul>
+                </article>
+                <article>
+                    <header>
+                        <p class="role">System Engineer &middot; Full-Stack Developer</p>
+                        <p class="company">TCS &middot; Sep 2015 - Feb 2018</p>
+                    </header>
+                    <ul>
+                        <li>Built 40+ Spring MVC APIs driving data from MongoDB for a Fortune 500 retail client.</li>
+                        <li>Led AngularJS best practices internally and for client partners.</li>
+                        <li>Supported applications from greenfield build to post-launch stabilization.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="certifications" class="card web-view">
+            <div class="section-heading">
+                <p class="eyebrow">Certifications</p>
+                <h2>Continuous learning</h2>
+            </div>
+            <ul class="list">
+                <li><strong>AWS Developer Associate</strong> &middot; Issued Aug 2020</li>
+                <li><strong>Azure Fundamentals (AZ-900)</strong> &middot; Issued Dec 2019</li>
+            </ul>
+        </section>
+
+        <section id="education" class="card web-view">
+            <div class="section-heading">
+                <p class="eyebrow">Education</p>
+                <h2>Degrees & milestones</h2>
+            </div>
+            <div class="education-grid">
+                <article>
+                    <p class="degree">M.Tech &middot; Data Science &amp; Engineering</p>
+                    <p class="school">BITS Pilani &middot; 2026 &middot; GPA 8.35</p>
+                </article>
+                <article>
+                    <p class="degree">B.Tech &middot; Electronics &amp; Communication</p>
+                    <p class="school">WBUT &middot; 2015 &middot; GPA 8.58</p>
+                </article>
+                <article>
+                    <p class="degree">ISC 12th &middot; Science</p>
+                    <p class="school">East West Model School &middot; 2010 &middot; 80.42%</p>
+                </article>
+                <article>
+                    <p class="degree">ICSE 10th</p>
+                    <p class="school">Holy Rock School &middot; 2008 &middot; 80.07%</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="card web-view contact-card">
+            <div>
+                <div class="section-heading">
+                    <p class="eyebrow">Contact</p>
+                    <h2>Ready to build something together?</h2>
+                </div>
+                <p>Based in Bangalore, open to onsite and remote roles. Reach out for opportunities across engineering leadership, data platforms, and high-impact delivery.</p>
+                <ul class="contact-list">
+                    <li>Email: <a href="mailto:chatterjeesoumya5327@gmail.com">chatterjeesoumya5327@gmail.com</a></li>
+                    <li>Phone: <a href="tel:+918050088732">+91 80500 88732</a></li>
+                    <li>LinkedIn: <a href="https://linkedin.com/in/soumyachatterjee-088" target="_blank" rel="noopener">linkedin.com/in/soumyachatterjee-088</a></li>
+                    <li>Portfolio: <a href="https://chatterjeesoumya5327.github.io" target="_blank" rel="noopener">chatterjeesoumya5327.github.io</a></li>
+                </ul>
+            </div>
+            <div class="contact-cta">
+                <p>Currently: Associate Vice President &middot; JPMorgan Chase <span>Oct 2022 - Present</span></p>
+                <a class="btn primary" href="mailto:chatterjeesoumya5327@gmail.com">Email Soumya</a>
+            </div>
+        </section>
+
+        <section class="cli-view" aria-live="polite" aria-label="Command line interface">
+            <div class="cli-banner">Know Soumya</div>
+            <div id="cli-output" class="cli-output">
+                <div class="line system">Type <code>soumya --help</code> to list available commands.</div>
+            </div>
+            <form id="cli-form" class="cli-form" autocomplete="off">
+                <label for="cli-input">visitor@soumya.dev</label>
+                <input id="cli-input" type="text" placeholder="Type a command..." aria-label="CLI command input">
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer web-view">
+        <p>&copy; <span id="year"></span> Soumya Chatterjee &middot; Built with care for the web and the command line.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
