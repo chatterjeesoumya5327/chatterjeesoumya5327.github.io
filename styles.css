@@ -165,8 +165,8 @@ a:focus-visible {
 .mode-toggle {
     border: 1px solid var(--border);
     border-radius: 999px;
-    background: white;
-    color: var(--text);
+    background: #1d4ed8;
+    color: white;
     padding: 0.5rem 1.25rem;
     font-weight: 600;
     cursor: pointer;
@@ -542,4 +542,28 @@ main {
         transform: translateY(0);
     }
 
+}
+.counter-major {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.2rem;
+    padding: 0 0.35rem;
+    font-size: 1.4rem;
+}
+
+.counter-major small {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+}
+
+.counter-time {
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 10px;
+    background: rgba(79, 70, 229, 0.08);
+    font-family: 'Space Mono', monospace;
+    font-weight: 600;
 }

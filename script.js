@@ -6,6 +6,7 @@ const yearLabel = document.getElementById('year');
 const modeToggle = document.getElementById('mode-toggle');
 const menuToggle = document.getElementById('menu-toggle');
 const siteNav = document.querySelector('.site-nav');
+const experienceCounter = document.getElementById('experience-counter');
 const commandHistory = [];
 let historyPointer = 0;
 const scrollCliToBottom = () => {
@@ -21,6 +22,52 @@ const syncCliScroll = () => {
 const scrollPageToTop = () => {
     window.scrollTo({ top: 0, behavior: 'instant' });
 };
+const experienceStart = new Date('2015-09-07T00:00:00');
+const updateExperienceCounter = () => {
+    if (!experienceCounter) return;
+    const now = new Date();
+    let years = now.getFullYear() - experienceStart.getFullYear();
+    let months = now.getMonth() - experienceStart.getMonth();
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    let anchor = new Date(experienceStart);
+    anchor.setFullYear(experienceStart.getFullYear() + years);
+    anchor.setMonth(experienceStart.getMonth() + months);
+
+    if (anchor > now) {
+        months--;
+        if (months < 0) {
+            months += 12;
+            years = Math.max(0, years - 1);
+        }
+        anchor = new Date(experienceStart);
+        anchor.setFullYear(experienceStart.getFullYear() + years);
+        anchor.setMonth(experienceStart.getMonth() + months);
+    }
+
+    let diffMs = now - anchor;
+    const msPerDay = 24 * 60 * 60 * 1000;
+    const days = Math.floor(diffMs / msPerDay);
+    diffMs -= days * msPerDay;
+    const hours = Math.floor(diffMs / (60 * 60 * 1000));
+    diffMs -= hours * 60 * 60 * 1000;
+    const minutes = Math.floor(diffMs / (60 * 1000));
+    diffMs -= minutes * 60 * 1000;
+    const seconds = Math.floor(diffMs / 1000);
+
+    const pad = (value) => String(value).padStart(2, '0');
+    experienceCounter.innerHTML = `
+        <span class="counter-major">${years}<small>yrs</small></span>
+        <span class="counter-major">${months}<small>mos</small></span>
+        <span class="counter-major">${days}<small>days</small></span>
+        <span class="counter-time">${pad(hours)}:${pad(minutes)}:${pad(seconds)}</span>
+    `;
+};
+updateExperienceCounter();
+setInterval(updateExperienceCounter, 1000);
 
 if (yearLabel) {
     yearLabel.textContent = new Date().getFullYear();
