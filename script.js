@@ -194,7 +194,7 @@ const commandResponses = {
         { type: 'info',     html: '<span class="t-cyan t-bold">contact.txt</span>' },
         { type: 'response', html: '<span class="t-yellow">Email:    </span>chatterjeesoumya5327@gmail.com' },
         { type: 'response', html: '<span class="t-yellow">Phone:    </span>+91 80500 88732' },
-        { type: 'response', html: '<span class="t-yellow">LinkedIn: </span>linkedin.com/in/soumyachatterjee-088' },
+        { type: 'response', html: '<span class="t-yellow">LinkedIn: </span>linkedin.com/in/soumya-chatterjee-088' },
         { type: 'response', html: '<span class="t-yellow">Portfolio:</span>chatterjeesoumya5327.github.io' },
     ]),
     'pwd': R([
