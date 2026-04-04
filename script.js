@@ -8,7 +8,6 @@ const menuToggle = document.getElementById('menu-toggle');
 const siteNav = document.querySelector('.site-nav');
 const navLinks = document.querySelectorAll('.site-nav a');
 const experienceCounter = document.getElementById('experience-counter');
-const cursorBlink = document.querySelector('.cursor-blink');
 const commandHistory = [];
 let historyPointer = 0;
 
@@ -319,7 +318,7 @@ let cliInitialized = false;
 const setMode = (isCli) => {
     body.classList.toggle('mode-cli', isCli);
     if (modeToggle) {
-        modeToggle.textContent = isCli ? '>_ TUI' : '>_ CLI';
+        modeToggle.textContent = isCli ? '>_ GUI' : '>_ CLI';
     }
 
     if (isCli) {
@@ -427,12 +426,3 @@ cliInput?.addEventListener('keydown', (event) => {
     }
 });
 
-// ===== CURSOR BLINK PAUSE ON TYPING =====
-let cursorTimer = null;
-cliInput?.addEventListener('input', () => {
-    if (cursorBlink) cursorBlink.style.visibility = 'hidden';
-    clearTimeout(cursorTimer);
-    cursorTimer = setTimeout(() => {
-        if (cursorBlink) cursorBlink.style.visibility = 'visible';
-    }, 800);
-});

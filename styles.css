@@ -171,6 +171,7 @@ a:focus-visible {
     font-weight: 500;
     flex: 1;
     justify-content: center;
+    margin-right: 6rem;
 }
 
 .site-nav a {
@@ -836,17 +837,6 @@ main {
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50%       { opacity: 0; }
-}
-
-.cursor-blink {
-    display: inline-block;
-    width: 8px;
-    height: 1.1em;
-    background: var(--term-green);
-    margin-left: 2px;
-    vertical-align: text-bottom;
-    animation: blink 1s step-end infinite;
-    flex-shrink: 0;
 }
 
 /* ===== MODE-CLI OVERRIDES ===== */
