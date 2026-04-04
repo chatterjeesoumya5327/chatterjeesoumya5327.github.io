@@ -58,7 +58,7 @@
             </div>
         </section>
 
-        <section id="about" class="card web-view">
+        <section id="about" class="card web-view" data-label="ABOUT">
             <div class="section-heading">
                 <p class="eyebrow">About</p>
                 <h2>Driving reliable applications from ingestion to insight.</h2>
@@ -73,28 +73,58 @@
             </p>
         </section>
 
-        <section id="skills" class="card web-view">
+        <section id="skills" class="card web-view" data-label="SKILLS">
             <div class="section-heading">
                 <p class="eyebrow">Skills</p>
                 <h2>Tools I reach for every day.</h2>
             </div>
-            <ul class="pill-list">
-                <li>Java</li>
-                <li>Spring Framework</li>
-                <li>Angular</li>
-                <li>SQL & PostgreSQL</li>
-                <li>MongoDB</li>
-                <li>Spark</li>
-                <li>Kubernetes</li>
-                <li>AWS</li>
-                <li>Azure</li>
-                <li>Machine Learning</li>
-                <li>Git</li>
-                <li>Splunk</li>
-            </ul>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <p class="skill-category-title">Languages</p>
+                    <ul class="pill-list">
+                        <li>Java</li>
+                        <li>SQL</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <p class="skill-category-title">Frameworks &amp; Libraries</p>
+                    <ul class="pill-list">
+                        <li>Spring Framework</li>
+                        <li>Angular</li>
+                        <li>AngularJS</li>
+                        <li>Spark</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <p class="skill-category-title">Cloud &amp; Infrastructure</p>
+                    <ul class="pill-list">
+                        <li>AWS</li>
+                        <li>Azure</li>
+                        <li>Kubernetes</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <p class="skill-category-title">Databases &amp; Observability</p>
+                    <ul class="pill-list">
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>Splunk</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <p class="skill-category-title">Data Science &amp; ML</p>
+                    <ul class="pill-list">
+                        <li>Machine Learning</li>
+                        <li>Data Engineering</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section id="experience" class="card web-view">
+        <section id="experience" class="card web-view" data-label="EXPERIENCE">
             <div class="section-heading">
                 <p class="eyebrow">Experience</p>
                 <h2>Career timeline</h2>
@@ -151,7 +181,7 @@
             </div>
         </section>
 
-        <section id="certifications" class="card web-view">
+        <section id="certifications" class="card web-view" data-label="CERTIFICATIONS">
             <div class="section-heading">
                 <p class="eyebrow">Certifications</p>
                 <h2>Continuous learning</h2>
@@ -162,7 +192,7 @@
             </ul>
         </section>
 
-        <section id="education" class="card web-view">
+        <section id="education" class="card web-view" data-label="EDUCATION">
             <div class="section-heading">
                 <p class="eyebrow">Education</p>
                 <h2>Degrees & milestones</h2>
@@ -187,7 +217,7 @@
             </div>
         </section>
 
-        <section id="contact" class="card web-view contact-card">
+        <section id="contact" class="card web-view contact-card" data-label="CONTACT">
             <div>
                 <div class="section-heading">
                     <p class="eyebrow">Contact</p>
@@ -208,14 +238,25 @@
         </section>
 
         <section class="cli-view" aria-live="polite" aria-label="Command line interface">
-            <div class="cli-banner">Know Soumya</div>
-            <div id="cli-output" class="cli-output">
-                <div class="line system">Type <code>soumya --help</code> to list available commands.</div>
+            <div class="term-titlebar">
+                <div class="term-traffic-lights">
+                    <span class="term-dot term-dot-red" aria-hidden="true"></span>
+                    <span class="term-dot term-dot-yellow" aria-hidden="true"></span>
+                    <span class="term-dot term-dot-green" aria-hidden="true"></span>
+                </div>
+                <span class="term-title">soumya@portfolio — bash — 80×24</span>
+                <div class="term-spacer" aria-hidden="true"></div>
             </div>
-            <form id="cli-form" class="cli-form" autocomplete="off">
-                <label for="cli-input">visitor@soumya.dev</label>
-                <input id="cli-input" type="text" placeholder="Type a command..." aria-label="CLI command input">
-            </form>
+            <div id="cli-output" class="cli-output"></div>
+            <div class="cli-prompt-row">
+                <span class="cli-prompt-text">
+                    <span class="prompt-user">soumya</span><span class="prompt-at">@</span><span class="prompt-host">portfolio</span><span class="prompt-path"> ~</span><span class="prompt-dollar">$</span>
+                </span>
+                <form id="cli-form" class="cli-form" autocomplete="off">
+                    <input id="cli-input" type="text" placeholder="type a command..." aria-label="CLI command input" spellcheck="false" autocorrect="off" autocapitalize="off">
+                </form>
+                <span class="cursor-blink" aria-hidden="true"></span>
+            </div>
         </section>
     </main>
 
