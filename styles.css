@@ -859,6 +859,7 @@ main {
 .mode-cli .site-header {
     background: rgba(1, 4, 9, 0.95);
     border-color: var(--term-border);
+    flex-wrap: nowrap;
 }
 
 .mode-cli .mode-toggle {
@@ -891,8 +892,13 @@ main {
     display: none;
 }
 
-.mode-cli .site-nav {
-    display: none;
+.mode-cli .site-nav,
+.mode-cli .site-nav.open {
+    display: none !important;
+}
+
+.mode-cli .menu-toggle {
+    display: none !important;
 }
 
 /* ===== EXPERIENCE COUNTER ===== */
@@ -948,6 +954,29 @@ main {
 
     .term-title {
         font-size: 0.65rem;
+    }
+
+    /* Keep header on one line in TUI mode */
+    body:not(.mode-cli) .site-header {
+        flex-wrap: nowrap;
+        gap: 0.75rem;
+    }
+
+    body:not(.mode-cli) .mode-toggle {
+        font-size: 0;
+        padding: 0.4rem 0.65rem;
+        flex-shrink: 0;
+    }
+
+    body:not(.mode-cli) .mode-toggle::before {
+        content: '>_';
+        font-size: 0.85rem;
+        font-family: 'Space Mono', monospace;
+        color: var(--tui-accent);
+    }
+
+    body:not(.mode-cli) .mode-toggle:hover::before {
+        color: var(--tui-invert-text);
     }
 }
 
