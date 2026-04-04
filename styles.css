@@ -3,7 +3,7 @@
     --tui-bg:           #0d0800;
     --tui-bg-panel:     #110b00;
     --tui-text:         #ffb000;
-    --tui-dim:          #7a5200;
+    --tui-dim:          #C48506;
     --tui-border:       #3d2600;
     --tui-border-hi:    #7a5200;
     --tui-title:        #ffd060;
@@ -670,7 +670,7 @@ main {
     font-family: 'Space Mono', monospace;
     font-size: 0.78rem;
     padding: 1rem 3vw;
-    text-align: left;
+    text-align: center;
     text-shadow: none;
 }
 
