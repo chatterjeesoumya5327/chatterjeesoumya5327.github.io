@@ -43,6 +43,12 @@ body {
     color: var(--tui-text);
 }
 
+@media (min-width: 1200px) {
+    html {
+        font-size: 20px;
+    }
+}
+
 body {
     background: var(--tui-bg);
     font-family: 'Space Mono', monospace;
