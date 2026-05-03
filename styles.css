@@ -584,6 +584,40 @@ main {
     margin: 0;
 }
 
+/* ===== AWARDS ===== */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+}
+
+.awards-grid article {
+    padding: 1rem;
+    border-radius: 0;
+    background: transparent;
+    border: 1px solid var(--tui-border);
+}
+
+.awards-grid article p {
+    margin: 0 0 0.4rem;
+    font-size: 0.88rem;
+}
+
+.awards-grid article p:last-child {
+    margin-bottom: 0;
+}
+
+.award-title {
+    color: var(--tui-title);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.award-issuer {
+    color: var(--tui-dim);
+    font-size: 0.82rem;
+}
+
 /* ===== CONTACT ===== */
 .contact-card {
     display: flex;
